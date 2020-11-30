@@ -7,7 +7,8 @@
     <title>Document</title>
 </head>
 <style>
-    div {
+    /* animation,定义多种动画规则，animation是定义从一种规则到另一种规则的动画 */
+    #div1 {
         width: 100px;
         height: 100px;
         background: red;
@@ -64,10 +65,25 @@
             left: 200px;
         }
     }
+
+    /* transition，设置当前元素的过度效果 */
+    /* transition-property;transition-duration;transition-timing-function;transition-delay*/
+    #div2 {
+        width: 100px;
+        height: 100px;
+        background: red;
+        transition: width 2s;
+        -webkit-transition: width 2s;
+        /* Safari */
+    }
+    #div2:hover {
+        width: 300px;
+    }
 </style>
 
 <body>
-    <div></div>
+    <div id='div1'></div>
+    <div id='div2'></div>
 </body>
 
 </html>
