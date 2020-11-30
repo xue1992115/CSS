@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>左边固定右边自适应</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #box1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            float: left;
+        }
+
+        #box2 {
+            background-color: black;
+            height: 200px;
+            margin-left: 200px;
+        }
+
+
+
+
+        #box3 {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            position: absolute;
+        }
+
+        #box4 {
+            background-color:orange;
+            height: 200px;
+            margin-left: 200px;
+        }
+
+
+
+
+        #container {
+            display: flex;
+        }
+
+        #box5 {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+        #box6 {
+            background-color: chartreuse;
+            height: 200px;
+            flex: 1;
+        }
+
+
+
+
+        #box7 {
+            background-color: chartreuse;
+            width: 200px;
+            height: 200px;
+        }
+        #box8 {
+            background-color: coral;
+            height: 200px;
+            position: absolute;
+            top: 0;
+            left: 200px;
+            bottom: 0;
+            right: 0;
+        }
+
+
+
+
+        #box9 {
+            background-color: fuchsia;
+            width: 200px;
+            height: 200px;
+            float: left;
+        }
+
+        #box10 {
+            background-color: darkgreen;
+            height: 200px;
+            float: right;
+            width: calc(100% - 200px);
+        }
+
+        #box11 {
+            display: inline-block;
+            background-color: gold;
+            width: 200px;
+            height: 200px;
+            box-sizing: border-box;
+        }
+        #box12 {
+            display: inline-block;
+            background-color: lightskyblue;
+            height: 200px;
+            width: calc(100% - 200px);
+        }
+        #container2 {
+            /* 去除空格间隙 */
+            font-size: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 方法四：左侧固定宽度，右侧position:absolute；并且设置top,left,right,bottom的值-->
+    <div id='box7'></div>
+    <div id='box8'></div>
+    <hr />
+    <!-- 方法一：左边固定宽度+float；右边不设置宽度, margin-left -->
+    <div id='box1'></div>
+    <div id='box2'></div>
+    <hr />
+    <!-- 方法二：左边固定宽度+position:absolute；右边不设置宽度,margin-left -->
+    <div id='box3'></div>
+    <div id='box4'></div>
+    <hr />
+    <!-- 方法三：父容器display: flex, 左边设置固定宽度，右边设置flex: 1 -->
+    <div id='container'>
+        <div id='box5'></div>
+        <div id='box6'></div>
+    </div>
+    <hr />
+    <!-- 方法五：双float，左侧给固定宽度，右侧的计算出宽度 -->
+    <div id='box9'></div>
+    <div id='box10'></div>
+    <hr />
+    <!-- 方法六：双line-block，注意需要在父组件去除空格-->
+    <div id='container2'>
+        <div id='box11'></div>
+        <div id='box12'></div>
+    </div>
+    <hr />
+    <!-- 
+        总结:
+        1、双float，右侧计算宽度
+        2、左固定，float,右侧margin-left
+        3、左侧固定，position:absolute, 右侧margin-left
+        4、左侧固定，右侧position:absolute,设置top,left,right,bottom,自动设置一个宽度
+        5、flex布局
+        6、双inline-block，注意在容器去除空格
+     -->
+
+</body>
+
+</html>

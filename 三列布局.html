@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三列布局：两边内容固定宽度，中间自适应</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .left1 {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+
+        .right1 {
+            float: right;
+            width: 200px;
+            height: 200px;
+            background: blue;
+        }
+
+        .main1 {
+            margin-left: 200px;
+            margin-right: 200px;
+            height: 200px;
+            background: green;
+        }
+
+
+
+        .left2 {
+            width: 200px;
+            height: 200px;
+            background-color:teal;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .right2 {
+            width: 200px;
+            height: 200px;
+            background-color: orangered;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .main2 {
+            height: 200px;
+            background-color: pink;
+            margin: 0 200px;
+        }
+
+
+        .container3 {
+            display: flex;
+        }
+
+        .left3 {
+            width: 200px;
+            height: 200px;
+            background-color: sienna;
+        }
+
+        .right3 {
+            width: 200px;
+            height: 200px;
+            background-color: turquoise;
+        }
+
+        .main3 {
+            height: 200px;
+            background-color: pink;
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 方法一：流式布局，左边做浮动，右边有浮动, 本质上是浮动 -->
+    <div class="container1">
+        <div class="left1"></div>
+        <div class="right1"></div>
+        <div class="main1"></div>
+    </div>
+    <!-- 方法二：position：absolute，设置左边的top,left,右边的top,right 中间的width:100% + margin -->
+    <!-- <div class="container2">
+        <div class="left2"></div>
+        <div class="right2"></div>
+        <div class="main2"></div>
+    </div> -->
+    <!-- 方法三：flex布局 -->
+    <!-- <div class="container3">
+        <div class="left3"></div>
+        <div class="right3"></div>
+        <div class="main3"></div>
+    </div> -->
+    <!-- 
+        总结:
+        (1)左右float + 中间margin
+        (2)左右position：absolute + 中间margin
+        (3)flex布局
+     -->
+</body>
+
+</html>

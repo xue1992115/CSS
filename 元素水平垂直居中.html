@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素水平垂直居中</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #box1 {
+            width: 200px;
+            height: 200px;
+            background: tomato;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        }
+
+        #box2 {
+            width: 200px;
+            height: 200px;
+            background: tomato;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -100px;
+            margin-left: -100px;
+        }
+
+        #container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 400px;
+            height: 400px;
+            background-color: violet;
+
+        }
+        #box3 {
+            width: 200px;
+            height: 200px;
+            background: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id='box1'></div> -->
+    <!-- <div id='box2'></div> -->
+    <div id='container'>
+        <div id='box3'></div>
+    </div>
+</body>
+
+</html>

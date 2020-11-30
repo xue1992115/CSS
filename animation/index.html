@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        width: 100px;
+        height: 100px;
+        background: red;
+        position: relative;
+        /* animation: mymove 5s infinite;
+        -webkit-animation: mymove 5s infinite; */
+        /* 应用动画 */
+        animation: mymove 5s;
+        -webkit-animation: mymove 5s;
+        /*Safari and Chrome*/
+        /* 动画开始延迟时间 */
+        animation-delay: 2s;
+        -webkit-animation-delay: 2s;
+        /* 动画方向，alternate是正反做一遍动画 */
+        animation-direction: alternate;
+        -webkit-animation-direction: alternate;
+        /* Safari 和 Chrome */
+        /* 动画完成时间 */
+        animation-duration: 1s;
+        -webkit-animation-duration: 1s;
+        /* Safari 和 Chrome */
+        /* 从一个地方移动到另一个地方并停留在那里 */
+        /* animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards; */
+        /* 迭代动画次数 */
+        animation-iteration-count: 3;
+        -webkit-animation-iteration-count: 3;
+        /*Safari and Chrome*/
+        /* 动画完成的速度是按照什么样的速度完成的 */
+        animation-timing-function: linear;
+        -webkit-animation-timing-function: linear;
+        /* Safari and Chrome */
+    }
+
+    @keyframes mymove {
+        from {
+            left: 0px;
+        }
+
+        to {
+            left: 200px;
+        }
+    }
+
+    @-webkit-keyframes mymove
+
+    /*Safari and Chrome*/
+        {
+        from {
+            left: 0px;
+        }
+
+        to {
+            left: 200px;
+        }
+    }
+</style>
+
+<body>
+    <div></div>
+</body>
+
+</html>
